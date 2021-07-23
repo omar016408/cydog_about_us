@@ -1,6 +1,8 @@
+/* * Prefixed by https://autoprefixer.github.io * PostCSS: v7.0.29, * Autoprefixer: v9.7.6 * Browsers: last 4 version */
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 html {
@@ -31,11 +33,15 @@ p{
     font-weight: 500;
     margin: 0 0 10px;
 }
+.header_title{
+    width: 100%;
+    font-size: 29px;
+    color: #222;
+    text-align: center;
+    font-weight: bold;
+}
 .header_text{
     font-weight: 500;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
     color: #333;
     text-align: left;
 }
@@ -45,27 +51,20 @@ p{
     width: 100%;
     padding-bottom: 30px;
 }
-
 .header_section .graphics{
-    width: 15%;
-    text-align: center;
-    margin-left: 42.5%;
-    margin-right: 42.5%;
+    width: 280px;
+    margin-left: auto;
 }
-.header_title{
+.header_section .header_title{
     width: 100%;
-    font-size: 26px;
+    font-size: 40px;
     color: #222;
     text-align: center;
     font-weight: bold;
 }
 .header_section .header_text{
     font-weight: 500;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
     color: #333;
-    text-align: left;
 }
 .header_section .font-weight-bold {
     font-size: 20px;
@@ -101,6 +100,7 @@ p{
     color: #3C4858;
 }
 .modal-dialog .modal-content{
+    -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     border-radius: 6px;
     border: none;
@@ -172,7 +172,9 @@ p{
     -o-border-radius: 3px !important;
 }
 .card .card-header-primary {
+    -webkit-box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
     box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 13px 24px -11px rgba(156,39,176,.6);
+    background: -o-linear-gradient(30deg,#ab47bc,#7b1fa2);
     background: linear-gradient(60deg,#ab47bc,#7b1fa2) 
 }
 .card-plain .card-body {
@@ -210,14 +212,14 @@ p{
 }
 .download_area h4{
     font-weight: 700;
-    font-size: 17px;
+    font-size: 26px;
     margin:10px 0;
+    text-align: left;
 }
 .download_area .download_button{
     background: #f5f5f5;
     font-size: 15px;
-    margin: 25px !important;
-    padding: 10px 20px;
+    padding: 13px 25px;
     line-height: 20px;
     color: #333;
     text-align: center;
@@ -227,7 +229,9 @@ p{
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    -webkit-box-shadow: 2px 3px 16px #b5a8a8;
     box-shadow: 2px 3px 16px #b5a8a8;
+    float: right;
 }
 /* end of download area */
 /*start of test area */
@@ -249,6 +253,7 @@ footer{
     background: #eee;
     text-align: right;
     color: #000;
+    padding: 22px 0;
 }
 footer .copyright_area{
     padding-right: 20px;
@@ -256,13 +261,25 @@ footer .copyright_area{
 footer .copyright_area a p{
     color: #000;
     margin: 0;
-    font-size: 17px;
+    font-size: 13px;
     font-weight: 400;
+}
+footer .font-weight-bold{
+    font-size: 13px;
 }
 /* end of footer area */
 /*responsive css*/
 @media only screen and (max-width: 768px){
+    .header_section .graphics_parent{
+        margin: auto !important;
+   }
+    .header_section .graphics{
+        margin-left: 0 !important;
+   }
     .about_us .modal_of .flex-row{
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
         flex-direction: column !important;
         text-align: center !important;
    }
@@ -271,6 +288,9 @@ footer .copyright_area a p{
    }
     .about_us .modal_of{
         padding-left: 0 !important;
+   }
+    .download_area .download_button{
+        float: none !important;
    }
 }
 @media only screen and (max-width: 576px){
