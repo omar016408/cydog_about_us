@@ -28,7 +28,7 @@ ul li{
 }
 p{
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 500;
     margin: 0 0 10px;
 }
 .header_text{
@@ -43,13 +43,14 @@ p{
 .header_section{
     background: #eee;
     width: 100%;
+    padding-bottom: 30px;
 }
+
 .header_section .graphics{
     width: 15%;
     text-align: center;
     margin-left: 42.5%;
     margin-right: 42.5%;
-    padding-top: 59px;
 }
 .header_title{
     width: 100%;
